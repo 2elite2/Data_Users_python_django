@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class ="container">
+<h1 class="text-center"> User profile </h1>
+<form method="post"  action="/select/">  
+    {% csrf_token %}
+    <div class="form-group">
+    <label for="school">Select School</label>
+    <input type="school" class="form-control" id="school" name="school" aria-describedby="school">
+    <small id="school" class="form-text text-muted">Select your last school</small>
+  </div>
+  <div class="form-group">
+    <label for="year">Passing Year</label>
+    <input type="year" class="form-control" id="year" name="year">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+{% endblock body %}
